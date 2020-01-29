@@ -19,9 +19,9 @@ Look at the Markdown Cheatsheet [PDF](https://www.rstudio.com/wp-content/uploads
   
   Take the following lines and do what they say.
 
-MAKE THIS LINE BOLD
+**MAKE THIS LINE BOLD**
 
-MAKE THE WORD ITALIC ITALICIZED
+MAKE THE WORD *ITALIC* ITALICIZED
 
 MAKE THE FOLLOWING R CODE CREATE A PLOT IN THIS DOCUMENT
 
@@ -41,4 +41,10 @@ GetHowManyTrees <- function(ntaxa=10) {
   return(result)
 }
 ```
+help(package="ape")
 
+
+for (i in c(1:20, 30, 40, 50))
+  cat(paste(i, howmanytrees(i), sep = "\t"), sep ="\n")
+
+howmanytrees(10, binary = FALSE, detail = TRUE)
